@@ -27,7 +27,7 @@ public class LottoController {
     @GetMapping("/")
     public String generateRandomData(ModelMap map){
        setLottoGenrator(new HardLottoGenerator());
-       map.put("numbers", lottoGenrator.GegerateDescription());
+       map.put("numbers", lottoGenrator.generate());
         return "lotto";
 
     }

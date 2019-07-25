@@ -21,6 +21,7 @@ public class HardLottoGenerator implements LottoGenrator  {
 
             List<Integer> integerList = new ArrayList<>();
             integerList.addAll(numbers);
+
             return integerList;
         }
 

@@ -3,18 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 
 <div align="center">
-    <h1>Wylosowane liczby to :</h1>
-<form action="/">
-    <img src="https://d-pt.ppstatic.pl/k/r/1/5c/45/5baa7ea8b5b5e_p.jpg?1537905733" alt="Lotto" style="width:700px;height:400px;">
+    <h1>Tabela liczb lotto :</h1>
 
-    <label style="background-color:white",style="font-size:160%;"><p th:text="${numbers}"/></label>
-    <input type="submit" value="Genruj Liczby" style="background-color:white" >
+<form action="/">
+
+    <br>
+    <div style="width: 25%" >
+    <table class="table table-hover table-dark">
+        <thead>
+        <tr>
+            <th scope="col">Wylosowane Liczyby </th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="number:${numbers}">
+            <td>liczba:</td>
+            <td th:text="${number}"></td>
+            <!--<td th:text="${number}"></td>-->
+            <!--<td th:text="${number}"></td>-->
+            <!--<td th:text="${number}"></td>-->
+            <!--<td th:text="${number}"></td>-->
+            <!--<td th:text="${number}"></td>-->
+
+        </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <br>
+   <button type="submit" class="btn btn-success"  >Generuj Liczby</button>
 
 </form>
+
+    
+
+
+   
 
 </div>
 
